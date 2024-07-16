@@ -31,7 +31,7 @@ We have also recorded a series of videos that walk you through the first six sec
 1. **Install Docker:**
     - Ensure Docker is installed on your system by following the instructions on the [official Docker website](https://www.docker.com/get-started/). We recommend installing [Docker Desktop](https://www.docker.com/products/docker-desktop/) for ease of use.
 2. **Optional (but strongly recommended):**
-    - If you want to have GPU support for local testing, install the NVIDIA container toolkit by following the [NVIDIA Docker installation guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html). Note that this does not compromise your building and exporting processes. It only hampers your testing process. You can avoid this by testing with CPU-only mode if possible. Make sure to remove the `--gpus all` flag from test.sh.
+    - If you want to have GPU support for local testing, install the NVIDIA container toolkit by following the [NVIDIA Docker installation guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html). Note that this does not compromise your building and exporting processes. It only hampers your testing process. You can avoid this by testing with CPU-only mode if possible. Make sure to remove the `--gpus all` flag from test_run.sh.
 3. **Clone this Repository:**
 ```
 git clone https://github.com/kwahid/HNTSMRG_2024.git
@@ -108,7 +108,7 @@ For the most part, you shouldn’t need to modify the test_run.sh file. **IMPORT
 To test your container, run:
 
 ```
-./test.sh
+./test_run.sh
 ```
 
 This will run the sample image(s) provided in the test folder through your model and save predicted segmentation masks to the output/images/mri-head-neck-segmentation directory. You can then compare these segmentation masks with the ones that you expected to receive from the model. If they match, that's a good sign that your algorithm is working correctly. If not, you should check the inference.py script and make sure that the inference code is correct.
@@ -121,7 +121,7 @@ After verifying that your container works correctly, package it for upload to Gr
 ./export.sh
 ```
 
-This step creates a file with the extension .tar.gz, which you can then upload to Grand Challenge to submit your algorithm. You can alternatively directly run a docker save command (after building the container or running the test.sh script) such as:
+This step creates a file with the extension .tar.gz, which you can then upload to Grand Challenge to submit your algorithm. You can alternatively directly run a docker save command (after building the container or running the test_run.sh script) such as:
 
 ```
 docker save example-algorithm-task-1-pre-rt-segmentation | gzip -c > example-algorithm-task-1-pre-rt-segmentation.tar.gz
