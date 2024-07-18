@@ -1,0 +1,9 @@
+name: elastix
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - jupyter
+  - pip
+  - pip:
+    - SimpleITK-SimpleElastix
