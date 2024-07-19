@@ -19,6 +19,7 @@ We have also recorded a series of videos that walk you through the first six sec
 5. [Testing your Docker Container Image](#5-testing-your-docker-container-image)
 6. [Saving your Docker Container Image as a Zip File](#6-saving-your-docker-container-image-as-a-zip-file)
 7. [Submitting an Algorithm (Zipped Docker Container Image) on Grand-Challenge.org](#7-submitting-an-algorithm-zipped-docker-container-image-on-grand-challengeorg)
+8. [General Remarks](#8-general-remarks)
 
 
 ## **1\. Prerequisites**
@@ -167,8 +168,7 @@ Once the container is imported and active, you can test your algorithm on sample
 5. **Submit to the Challenge**  
     - Select your algorithm on the relevant phase submission page. Your algorithm will then be run on the relevant patient cases for that phase.
 
-
-## **General Remarks**
+## **8\. General Remarks**
 
 - **Inference Only:** Ensure that training is not part of the Docker container; only inference should run within the container.
 - **Path Specifications:** Verify that the container reads from the `/input` path and writes to the `/output` path as specified.
