@@ -2,6 +2,8 @@
 
 **Authors:** Kareem A. Wahid (<kawahid@mdanderson.org>), Cem Dede (<cdede@mdanderson.org>).
 
+**General Contact Email:** <hntsmrg2024@gmail.com>.
+
 *Note: We would like to thank the authors of the [MIDOG](https://github.com/DeepMicroscopy/MIDOG_reference_docker), [HaN-Seg](https://github.com/gasperpodobnik/HanSeg2023Algorithm?tab=readme-ov-file#export), and [SegRap](https://github.com/HiLab-git/SegRap2023/tree/main?tab=readme-ov-file) challenges for their reference documentation on which this tutorial is based.*
 
 These files serve as templates for preparing algorithm Docker container images for the [HNTS-MRG 2024 Challenge](https://hntsmrg24.grand-challenge.org/). They include scripts and path definitions necessary to run your algorithms on the grand-challenge.org platform. To better understand how algorithms on grand-challenge.org work, you may want to read the blog posts on [how to create an algorithm](https://grand-challenge.org/documentation/create-your-own-algorithm/).
@@ -54,7 +56,7 @@ This repository provides two examples: an example for Task 1 (pre-RT segmentatio
 
 1. **Modify `inference.py`:**
     - You can add additional functions, include additional scripts, and import additional Python libraries. You must use the paths defined (inputs, outputs) exactly for your script to work with the Grand Challenge interface.
-    - *Note: The Grand Challenge platform will run the Docker container for each patient separately. There is a hard-limit 15-minute run-time. Keep this in mind when writing your inference code.*
+    - *Note: The Grand Challenge platform will run the Docker container for each patient separately. There is a hard-limit 15-minute run-time. This means you should be cognizant of factors like implementing a large number of ensembles or time-sensitive registration processes in your algorithm.*
 2. **Modify `Dockerfile`:**
     - Change the base image in the Dockerfile if necessary, e.g., `FROM nvcr.io/nvidia/pytorch:22.12-py3` for Pytorch.
     - Add your model weights and other necessary files. You can place these in the `/resources` folder or make a new folder (but remember to use the `COPY` command in the Dockerfile).
@@ -172,4 +174,5 @@ Once the container is imported and active, you can test your algorithm on sample
 - **Path Specifications:** Verify that the container reads from the `/input` path and writes to the `/output` path as specified.
 - **Development Phase Submission:** Submit to the development phase (2 patients) first to debug and verify that your container is working as expected, as you have multiple attempts available.
 - **Final Test Phase Submission:** Once you are confident in your algorithm's performance, proceed to the final test phase (50 patients), where you will have only one attempt to submit.
+- **Reach out to us!**: If this is your first time working with Docker/Grand-Challenge or anything is confusing, please don’t hesitate to reach out to us with questions (<hntsmrg2024@gmail.com>). We are here to help and are happy and even jump on a Zoom call to debug. The last thing we want is for this to be a bottleneck to you submitting your algorithm for the challenge. 
 
