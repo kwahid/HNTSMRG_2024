@@ -164,7 +164,6 @@ Before submitting to the challenge, you should first test your Docker container 
 4. **Try-out Algorithm and Visualize Results:**  
     - Once your container is imported and active, you can also ["try out" your algorithm](https://grand-challenge.org/documentation/try-out-your-algorithm/) on some sample data. You can use one of the training images (NIfTI files from Zenodo, or the provided MHA files from the `test/input` folder) to test if predictions are as expected.
     - The Grand Challenge website has an online results viewer which allows you to visualize your generated segmentations.
-Once the container is imported and active, you can test your algorithm on sample data using one of the training images (NIfTI files from Zenodo, or the provided MHA files from the `test/input` folder).
 5. **Submit to the Challenge:**  
     - Select your algorithm on the relevant phase submission page. Your algorithm will then be run on the relevant patient cases for that phase.
 
