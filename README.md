@@ -4,6 +4,8 @@ Welcome to the GitHub repository for the Head and Neck Tumor Segmentation for MR
 
 **General Contact Email:** <hntsmrg2024@gmail.com>.
 
+![Challenge Logo](hntsmrg_banner.jpeg)
+
 ## Overview 
 
 The HNTS-MRG 2024 Challenge is aimed at developing and benchmarking algorithms for the segmentation of head and neck tumors in magnetic resonance images. The challenge is divided into two tasks:
@@ -28,3 +30,9 @@ Use the following command to clone this repository to your local computer.
 ```
 git clone https://github.com/kwahid/HNTSMRG_2024.git
 ```
+
+## Misc.
+
+[Fuller lab Website: https://www.mdanderson.org/research/departments-labs-institutes/labs/fuller-laboratory.html](https://www.mdanderson.org/research/departments-labs-institutes/labs/fuller-laboratory.html). 
+
+![Fuller Logo](Fuller_logo_long.png)
