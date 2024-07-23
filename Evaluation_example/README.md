@@ -1,14 +1,17 @@
 # Evaluation Example
 
-This directory contains the necessary files and examples for evaluating the performance of segmentation models using ground truth and prediction masks for head and neck cancer patients. The evaluation process includes the calculation of the Dice Similarity Coefficient (DSC) to measure the accuracy of the segmentation.
+This directory contains files and example data for evaluating the performance of segmentation models using "ground truth" and "prediction" masks for the [HNTS-MRG 2024 Challenge](https://hntsmrg24.grand-challenge.org/). The evaluation process includes the calculation of the aggregated Dice Similarity Coefficient (DSCagg) to measure the accuracy of the segmentation across a set of patients. More information on the evaluation for the challenge can be found on the [Tasks and Evaluation page of our Grand Challenge Website](https://hntsmrg24.grand-challenge.org/tasks-and-evaluation/). 
 
 ## Directory Structure
 
+We provide some example data to run the code. The masks used as examples for the code are a subset of the [HNTS-MRG 2024 Training dataset on Zenodo](https://zenodo.org/records/11199559). You should replace the ground-truth and prediction masks with your own data. 
+
+
 ### Ground Truth Masks
 
-This directory contains ground truth masks for mid-treatment imaging data. These masks serve as the reference standard for evaluating the accuracy of predicted masks.
+This directory contains ground truth masks for mid-treatment imaging data. These masks serve as the reference for evaluating the accuracy of predicted masks.
 
-#### File Structure
+#### Files
 
 - `8_midRT_mask.nii.gz`
 - `77_midRT_mask.nii.gz`
@@ -26,35 +29,11 @@ This directory contains ground truth masks for mid-treatment imaging data. These
 - `96_midRT_mask.nii.gz`
 - `99_midRT_mask.nii.gz`
 
-#### Description
-
-Each NIfTI file in this directory corresponds to a specific patient and represents the ground truth segmentation of relevant anatomical structures as observed in mid-treatment imaging. These masks are crucial for assessing the performance of prediction models in accurately identifying and segmenting structures during the course of treatment.
-
-#### Usage
-
-These ground truth masks are intended to be used for:
-- Validating and benchmarking segmentation algorithms.
-- Comparing pre-treatment and mid-treatment anatomical changes.
-- Enhancing the accuracy of radiation therapy planning through improved model predictions.
-
-#### File Format
-
-The masks are stored in NIfTI format, which is widely used in medical imaging due to its ability to store multidimensional data along with metadata. Each file contains:
-- Voxel-wise segmentation data.
-- Relevant header information for proper spatial orientation.
-
-#### Notes
-
-- Ensure that the NIfTI files are correctly registered to the corresponding imaging data.
-- When using these masks, please cite the original source or dataset if applicable.
-
----
-
 ### Prediction Masks
 
-This directory contains predicted masks for pre-treatment imaging data. These masks are used for comparison with ground truth masks to evaluate the accuracy of predictive models.
+This directory contains "predicted" masks. In this scenario, we take the pre-RT mask as a "prediction"; we use the word prediction loosley here. These masks are used for comparison with ground truth masks to evaluate the accuracy of simply propagating registered segmentations to the next timepoint.
 
-#### File Structure
+#### Files
 
 - `8_preRT_mask_registered.nii.gz`
 - `77_preRT_mask_registered.nii.gz`
@@ -72,60 +51,12 @@ This directory contains predicted masks for pre-treatment imaging data. These ma
 - `96_preRT_mask_registered.nii.gz`
 - `99_preRT_mask_registered.nii.gz`
 
-#### Description
+## DSCagg_calculation.ipynb
 
-Each NIfTI file in this directory corresponds to a specific patient and represents the predicted segmentation of relevant anatomical structures as observed in pre-treatment imaging. These predictions are compared against mid-treatment ground truth masks to assess the performance and reliability of the segmentation models.
+This Jupyter Notebook, `DSCagg_calculation.ipynb`, is used to calculate the DSCagg for evaluating the accuracy of the predicted masks compared to the ground truth masks.
 
-#### Usage
+## Notes
 
-These prediction masks are intended to be used for:
-- Evaluating the accuracy of segmentation models against ground truth data.
-- Studying pre-treatment anatomical structures for better treatment planning.
-- Research and development of improved predictive models for radiation oncology.
+- The DSCagg values range from 0 to 1, where 1 indicates perfect overlap, and 0 indicates no overlap.
+- DSCagg was initially described in detail in [this paper (doi: 10.1109/EMBC48229.2022.9871907)](https://ieeexplore.ieee.org/document/9871907).
 
-#### File Format
-
-The masks are stored in NIfTI format, which is widely used in medical imaging due to its ability to store multidimensional data along with metadata. Each file contains:
-- Voxel-wise segmentation data.
-- Relevant header information for proper spatial orientation.
-
-#### Notes
-
-- Ensure that the NIfTI files are correctly registered to the corresponding imaging data.
-- When using these masks, please cite the original source or dataset if applicable.
-
----
-
-### DSCagg_calculation.ipynb
-
-This Jupyter Notebook, `DSCagg_calculation.ipynb`, is used to calculate the Dice Similarity Coefficient (DSC) for evaluating the accuracy of the predicted masks compared to the ground truth masks.
-
-#### Description
-
-The Dice Similarity Coefficient (DSC) is a statistical tool used to measure the similarity between two sets of data. In this context, it is used to compare the overlap between the predicted segmentation masks and the ground truth segmentation masks.
-
-#### Usage
-
-1. Ensure that the predicted masks and ground truth masks are correctly registered and aligned.
-2. Load the `DSCagg_calculation.ipynb` notebook.
-3. Follow the instructions within the notebook to calculate the DSC for each pair of masks.
-
-#### Notes
-
-- The DSC values range from 0 to 1, where 1 indicates perfect overlap, and 0 indicates no overlap.
-- Use the calculated DSC values to evaluate and improve the segmentation models.
-
----
-
-## Contributing
-
-If you would like to contribute to this project, please fork the repository and create a pull request with your changes. Ensure that your contributions adhere to the guidelines and standards of the project.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-## Acknowledgments
-
-- We acknowledge the contributions of all researchers and institutions involved in the creation and maintenance of this dataset.
-- Please cite the original source or dataset when using these masks in your research.
