@@ -22,7 +22,7 @@ Additional important information can be found on our [Grand Challenge website](h
 
 ## Repository Structure
 
-This repository contains 3 main subfolders (each which contain their own README.md files that provide further info):
+This repository contains 3 main subfolders (each which contain their own `README.md` files that provide further info):
 
 - **Docker_tutorial/**: Includes comprehensive instructions and scripts to help participants package their algorithms into Docker containers for submission to grand-challenge.org.
 - **Evaluation_example/**: Contains example code for calculating the DSCagg metric, which will be used to evaluate algorithms. Includes sample data for calculations.
