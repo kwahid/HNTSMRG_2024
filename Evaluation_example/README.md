@@ -112,7 +112,7 @@ The Dice Similarity Coefficient (DSC) is a statistical tool used to measure the 
 
 #### Notes
 
-- The DSC values range from 0 to 1, where 1 indicates perfect overlap and 0 indicates no overlap.
+- The DSC values range from 0 to 1, where 1 indicates perfect overlap, and 0 indicates no overlap.
 - Use the calculated DSC values to evaluate and improve the segmentation models.
 
 ---
