@@ -10,8 +10,13 @@ Welcome to the GitHub repository for the Head and Neck Tumor Segmentation for MR
 
 The HNTS-MRG 2024 Challenge is aimed at developing and benchmarking algorithms for the segmentation of head and neck tumors in magnetic resonance images. The challenge is divided into two tasks:
 
-- Task 1: Pre-Radiotherapy Segmentation
-- Task 2: Mid-Radiotherapy Segmentation
+**- Task 1: Pre-Radiotherapy Segmentation**
+
+<img src="Inputs_outputs_figure-01.png" alt="Task1" width="800"/>
+
+**- Task 2: Mid-Radiotherapy Segmentation**
+
+<img src="Inputs_outputs_figure-02.png" alt="Task2" width="800"/>
 
 Additional important information can be found on our [Grand Challenge website](https://hntsmrg24.grand-challenge.org/). The training data (n=150 patients) is available on [Zenodo](https://zenodo.org/records/11199559).
 
