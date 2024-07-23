@@ -67,6 +67,8 @@ For Windows users who do not want to use WSL, we have also provided analagous .b
 3. **Add Required Python Packages:**
     - List all required Python packages in the `requirements.txt` file to be installed when the container is built.
 
+All Docker containers submitted to the challenge will be run in an offline setting (i.e. they will not have access to the internet, and cannot download/upload any resources). All necessary resources (e.g. pre-trained weights) must be encapsulated in the submitted containers a priori.
+
 ## **4\. Building your Docker Container Image**
 
 To build the Docker container image, run the following command from the root of your project directory:
