@@ -1,10 +1,10 @@
 # HNTS-MRG 2024 Repo
+![Challenge Logo](hntsmrg_banner.jpeg)
 
 Welcome to the GitHub repository for the Head and Neck Tumor Segmentation for MR-Guided Applications (HNTS-MRG) 2024 Challenge. This repository contains all the necessary scripts and documentation to participate in the challenge.
 
 **General Contact Email:** <hntsmrg2024@gmail.com>.
 
-![Challenge Logo](hntsmrg_banner.jpeg)
 
 ## Overview 
 
