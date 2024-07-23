@@ -147,7 +147,7 @@ docker save example-algorithm-task-1-pre-rt-segmentation | gzip -c > example-alg
 
 ## **7\. Submitting an Algorithm (Zipped Docker Container Image) on Grand-Challenge.org**
 
-Before submitting to the challenge, you should first test your Docker container locally (as outlined above). [This Grand Challenge webpage](https://grand-challenge.org/documentation/building-and-testing-the-container/) might help you with testing.
+Before submitting to the challenge, you should first test your Docker container locally (as outlined above). [This Grand Challenge webpage](https://grand-challenge.org/documentation/building-and-testing-the-container/) might further help you with testing. The following are general steps for submitting the container on the Grand Challenge website. More detailed instructions (with screenshots) can be found on the [Submission Instructions page for HNTS-MRG 2024](https://hntsmrg24.grand-challenge.org/submission-instructions/).
 
 **General Steps to Submit Your Docker Container**
 1. **Create an Algorithm Entry:**
