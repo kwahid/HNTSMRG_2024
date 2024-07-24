@@ -9,7 +9,7 @@ We provide some example data to run the code. The masks used as examples for the
 
 ### Ground Truth Masks
 
-This directory contains ground truth masks for mid-treatment imaging data. These masks serve as the reference for evaluating the accuracy of predicted masks.
+This directory contains ground truth masks for mid-treatment imaging data (you can think of this as an evaluation for Task 2 of the challenge). These masks serve as the reference for evaluating the accuracy of predicted masks.
 
 #### Files
 
