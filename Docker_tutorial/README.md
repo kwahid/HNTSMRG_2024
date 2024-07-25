@@ -60,7 +60,7 @@ For Windows users who do not want to use WSL, we have also provided analagous .b
 1. **Modify `inference.py`:**
     - You can add additional functions, include additional scripts, and import additional Python libraries.
         - You must use the paths defined (inputs, outputs) exactly for your script to work with the Grand Challenge interface.
-        - When building models, the resolution of the generated prediction masks should be the same as the corresponding MRI for the given task. In other words, the generated masks should be in the correct pixel spacing and origin with respect to the original reference frame (i.e., pre-RT image for Task 1, mid-RT image for Task 2). 
+        - The *size, spacing, origin, and direction* of the generated prediction masks should be the same as the corresponding MRI for the given task (i.e., pre-RT image for Task 1, mid-RT image for Task 2). 
     - *Note: The Grand Challenge platform will run the Docker container for each patient separately. There is a hard-limit 15-minute run-time. This means you should be cognizant of factors like implementing a large number of ensembles or time-sensitive registration processes in your algorithm.*
 2. **Modify `Dockerfile`:**
     - Change the base image in the Dockerfile if necessary, e.g., `FROM nvcr.io/nvidia/pytorch:22.12-py3` for Pytorch.
