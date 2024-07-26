@@ -55,6 +55,11 @@ This repository provides two examples: an example for Task 1 (pre-RT segmentatio
 
 For Windows users who do not want to use WSL, we have also provided analagous .bat files (`build.bat`, `test_run.bat`. `export.bat`). But again, we suggest using WSL instead. 
 
+*Note: If you get permission denied errors with the `.sh` files you may need to add execution permissions to the script. E.g.*
+```
+chmod +x test_run.sh
+```
+
 ## **3\. Embedding an Algorithm into a Docker Container Image**
 
 1. **Modify `inference.py`:**
