@@ -138,7 +138,7 @@ test/
             └─── output.mha file
 ```
 
-You can then compare this segmentation masks with the one that you expected to receive from the model. If they match, that's a good sign that your algorithm is working correctly. If not, you should check the inference.py script and make sure that the inference code is correct.
+You can then compare this segmentation mask with the one that you expected to receive from the model. If they match, that's a good sign that your algorithm is working correctly. If not, you should check the inference.py script and make sure that the inference code is correct. You can use [3DSlicer](https://www.slicer.org/) to view the input image and output prediction mask (load the prediction as a labelmap). 
 
 ## **6\. Saving your Docker Container Image as a Zip File**
 
