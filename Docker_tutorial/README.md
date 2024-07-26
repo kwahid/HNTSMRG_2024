@@ -53,7 +53,7 @@ This repository provides two examples: an example for Task 1 (pre-RT segmentatio
 - **`test_run.sh`:** A bash script that will build and execute the Docker container image using the provided input data for one patient contained in `test/input`.
 - **`export.sh`:** A bash script that will zip the built Docker container image into a single file for upload to the Grand Challenge website.
 
-For Windows users who do not want to use WSL, we have also provided analagous .bat files (`build.bat`, `test_run.bat`. `export.bat`). But again, we suggest using WSL instead. 
+For Windows users who do not want to use WSL, we have also provided analagous .bat files (`build.bat`, `test_run.bat`, `export.bat`). But again, we suggest using WSL instead. 
 
 *Note: If you get permission denied errors with the `.sh` files you may need to add execution permissions to the script. E.g.*
 ```
