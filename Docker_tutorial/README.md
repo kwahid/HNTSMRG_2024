@@ -8,7 +8,7 @@
 
 These files serve as templates for preparing algorithm Docker container images for the [HNTS-MRG 2024 Challenge](https://hntsmrg24.grand-challenge.org/). They include scripts and path definitions necessary to run your algorithms on the grand-challenge.org platform. To better understand how algorithms on grand-challenge.org work, you may want to read the blog posts on [how to create an algorithm](https://grand-challenge.org/documentation/create-your-own-algorithm/).
 
-We have also recorded a series of videos that walk you through the first [six sections (https://youtu.be/flpGBMqxtsM)](https://youtu.be/flpGBMqxtsM) and submitting an algorithm on Grand-Challenge.org (link will be inserted here later).
+We have also recorded a series of videos that walk you through the first [six sections (https://youtu.be/flpGBMqxtsM)](https://youtu.be/flpGBMqxtsM) and [submitting an algorithm on Grand-Challenge.org (https://youtu.be/B6li_TY6dxo)](https://youtu.be/B6li_TY6dxo).
 
 ## **Table of Contents**
 
