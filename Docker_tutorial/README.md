@@ -70,7 +70,7 @@ chmod +x test_run.sh
 2. **Modify `Dockerfile`:**
     - Change the base image in the Dockerfile if necessary, e.g., `FROM nvcr.io/nvidia/pytorch:22.12-py3` for Pytorch.
     - Add your model weights and other necessary files. You can place these in the `/resources` folder or make a new folder (but remember to use the `COPY` command in the Dockerfile).
-    - *Note: Your Dockerfile may get fairly complicated if you require many specific installs or dependencies. This often is the main factor for large final Docker container image sizes. Your final zipped Docker container image must be < 10 GB to be uploaded to the Grand Challenge.*
+    - *Note: Your Dockerfile may get fairly complicated if you require many specific installs or dependencies. This often is the main factor for large final Docker container image sizes. Your final zipped Docker container image should be < 10 GB (recommendation by Grand Challenge, but not a hard limit).*
 3. **Add Required Python Packages:**
     - List all required Python packages in the `requirements.txt` file to be installed when the container is built.
 
@@ -148,7 +148,7 @@ After verifying that your container works correctly, package it for upload to Gr
 ./export.sh
 ```
 
-This step creates a file with the extension .tar.gz, which you can then upload to Grand Challenge to submit your algorithm (*keep in mind the 10GB zip file size limit*). You can alternatively directly run a docker save command (after building the container or running the `test_run.sh` script) such as:
+This step creates a file with the extension .tar.gz, which you can then upload to Grand Challenge to submit your algorithm (*keep in mind the 10GB zip file size recommendation*). You can alternatively directly run a docker save command (after building the container or running the `test_run.sh` script) such as:
 
 ```
 docker save example-algorithm-task-1-pre-rt-segmentation | gzip -c > example-algorithm-task-1-pre-rt-segmentation.tar.gz
