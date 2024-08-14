@@ -66,7 +66,7 @@ chmod +x test_run.sh
     - You can add additional functions, include additional scripts, and import additional Python libraries.
         - You must use the paths defined (inputs, outputs) exactly for your script to work with the Grand Challenge interface.
         - The *size, spacing, origin, and direction* of the generated prediction masks should be the same as the corresponding MRI for the given task (i.e., pre-RT image for Task 1, mid-RT image for Task 2). You can use `output_sitk_img.CopyInformation(input_sitk_img)` to copy the origin, spacing and direction values from the input image to the output image to ensure they correspond.
-    - *Note: The Grand Challenge platform will run the Docker container for each patient separately. There is a hard-limit 15-minute run-time. This means you should be cognizant of factors like implementing a large number of ensembles or time-sensitive registration processes in your algorithm.*
+    - *Note: The Grand Challenge platform will run the Docker container for each patient separately. There is a hard-limit 20-minute run-time. This means you should be cognizant of factors like implementing a large number of ensembles or time-sensitive registration processes in your algorithm.*
 2. **Modify `Dockerfile`:**
     - Change the base image in the Dockerfile if necessary, e.g., `FROM nvcr.io/nvidia/pytorch:22.12-py3` for Pytorch.
     - Add your model weights and other necessary files. You can place these in the `/resources` folder or make a new folder (but remember to use the `COPY` command in the Dockerfile).
